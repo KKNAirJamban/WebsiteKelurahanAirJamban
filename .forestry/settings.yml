@@ -4,13 +4,11 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: document-test
-  label: document-test
+- type: directory
+  path: "./upload/forestry"
+  label: Index
+  create: all
   match: "**/*"
-  read_only: true
-- type: heading
-  label: sidebar-forestry
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
