@@ -5,10 +5,8 @@ admin_path: "/admin"
 webhook_url: 
 sections:
 - type: document
-  path: "./potensi"
+  path: "./potensi.html"
   label: Potensi
-  match: "**/*"
-  read_only: false
 - type: directory
   path: "./upload/forestry"
   label: Index
