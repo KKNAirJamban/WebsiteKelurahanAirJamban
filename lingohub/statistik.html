@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Statistik - Kelurahan Air Jamban</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+	<link rel="manifest" href="assets/img/site.webmanifest">
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+	
+	<!-- Chart.js -->
+	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script> 
+	
+	<script>
+        $(function () {/*from   w ww .  ja va2 s  . c o  m*/
+		<!--chart gender-->
+		//style
+		    Chart.defaults.global.defaultFontFamily = 'arial';
+			Chart.defaults.global.defaultFontSize = 16;
+			Chart.defaults.global.defaultFontColor = '#000';
+		
+		
+            var ctx = document.getElementById("chart-gender").getContext('2d');
+            var data = {
+                datasets: [{
+                    data: [32099, 33193,],
+                    backgroundColor: [
+                        '#3c8dbc',
+                        '#f56954',
+                    ],
+                }],
+                labels: [
+                    'Laki-laki',
+                    'Perempuan'
+                ]
+            };
+            var myPieChart = new Chart(ctx, {
+                type: 'pie',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12
+                        }
+                    }
+                }
+            });
+			
+			<!--chart usia-->
+            var ctx_2 = document.getElementById("chart-usia").getContext('2d');
+            var data_2 = {
+                datasets: [{
+                    data: [16926, 37220, 11146],
+                    backgroundColor: [
+                        '#3c8dbc',
+                        '#f56954',
+                        '#f39c12',
+                    ],
+                }],
+                labels: [
+                    'Usia 0-15',
+                    'Usia 15-65',
+                    'Usia >65'
+                ]
+            };
+            var myPieChart_2 = new Chart(ctx_2, {
+                type: 'pie',
+                data: data_2,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12
+                        }
+                    }
+                }
+            });
+			
+			<!--chart pekerjaan-->
+			var ctx_3 = document.getElementById("chart-pekerjaan").getContext('2d');
+			var data_3 = {
+                datasets: [{
+                    data: [16991, 9210, 3416, 3613, 5652, 2814, 426, 5, 27, 25, 1, 20012],
+                    backgroundColor: [
+                        '#3c8dbc',
+                        '#f56954',
+                        '#f39c12',
+						'#481f33',
+						'#750201',
+						'#603c6c',
+						'#a02b6b',
+						'#1fdf43',
+						'#2bd532',
+						'#4cbd58',
+						'#44c146',
+						'#3da38c',
+                    ],
+                }],
+                labels: [
+                    'Karyawan',
+                    'Wiraswasta',
+                    'Tani',
+					'Pertukangan',
+					'Buruh Tani',
+					'Pensiunan',
+					'Guru',
+					'Pengrajin',
+					'Peternak',
+					'Jasa',
+					'Pekerja Seni',
+					'Tidak bekerja'
+                ]
+            };
+            var myPieChart_3 = new Chart(ctx_3, {
+                type: 'pie',
+                data: data_3,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12
+                        }
+                    }
+                }
+            });
+			
+			<!--chart pendidikan-->
+			var ctx_4 = document.getElementById("chart-pendidikan").getContext('2d');
+			var data_4 = {
+                datasets: [{
+                    data: [5955, 13618, 10908, 22368, 2731, 2317, 295],
+                    backgroundColor: [
+                        '#3c8dbc',
+                        '#f56954',
+                        '#f39c12',
+						'#481f33',
+						'#750201',
+						'#603c6c',
+						'#a02b6b',
+                    ],
+                }],
+                labels: [
+                    'TK',
+                    'SD/Sederajat',
+                    'SMP/Sederajat',
+					'SMA/Sederajat',
+					'Akademi/D1-D3',
+					'Sarjana (S1)',
+					'Pascasarjana (S2,S3)',
+                ]
+            };
+            var myPieChart_4 = new Chart(ctx_4, {
+                type: 'pie',
+                data: data_4,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12
+                        }
+                    }
+                }
+            });
+        });
+      </script> 
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+      <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1>
+            <a href="index.html"><span>Kelurahan Air Jamban</span></a>
+          </h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+            <li><a class="nav-link scrollto" href="profil.html">Profil</a></li>
+            <li><a class="nav-link scrollto" href="potensi.html">Potensi</a></li>
+            <li class="dropdown">
+              <a href="#"
+                ><span class="nav-link scrollto active">Statistik</span> <i class="bi bi-chevron-down"></i
+              ></a>
+              <ul>
+                <li><a href="#penduduk">Penduduk</a></li>
+                <li><a href="#pekerjaan">Pekerjaan</a></li>
+                <li><a href="#pendidikan">Tingkat Pendidikan</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-link scrollto" href="index.html#kontak">Kontak</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+    
+    <main id="main">
+
+    <!-- End main -->
+
+    <section id="paralax-statistik" class="paralax">
+      <div class="container">
+
+        <div class="" data-aos="fade-up" data-aos-delay="100">
+          <div class="">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <h2>Statistik Kelurahan Air Jamban</h2>
+              </div>
+            </div><!-- End testimonial item -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section><!-- End paralax Section -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!--Statistik Section-->
+    <section id="statistik">
+      <div class="container" data-aos="fade-up">
+        <div id="penduduk" class="section-title" data-aos="fade-up">
+          <h2 id="section-title-inner-page">Statistik Penduduk</h2>
+          <p>Berdasarkan Gender</p>
+        </div>
+		<div> 
+         <canvas id="chart-gender" width="240px" height="240px"></canvas> 
+		</div>
+		
+		<div class="section-title" data-aos="fade-up">
+          <h2 id="section-title-inner-page">Statistik Penduduk</h2>
+          <p>Berdasarkan Usia</p>
+        </div>
+		<div> 
+         <canvas id="chart-usia" width="240px" height="240px"></canvas> 
+		</div>
+		
+		<div id="pekerjaan" class="section-title" data-aos="fade-up">
+          <h2 id="section-title-inner-page">Statistik Penduduk</h2>
+          <p>Pekerjaan</p>
+        </div>
+		<div> 
+         <canvas id="chart-pekerjaan" width="240px" height="240px"></canvas> 
+		</div>
+		
+		<div id="pendidikan" class="section-title" data-aos="fade-up">
+          <h2 id="section-title-inner-page">Statistik Penduduk</h2>
+          <p>Pendidikan</p>
+        </div>
+		<div> 
+         <canvas id="chart-pendidikan" width="240px" height="240px"></canvas> 
+		</div>
+		
+	</section>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-info">
+                <h3>Website Kelurahan Air Jamban</h3>
+                <img class="footer-kkn-img" src="assets/img/logokkn.svg" />
+                <p>
+                  Website ini adalah salah satu program kerja Tim KUKERTA Balek
+                  Kampung Universitas Riau di Kelurahan Air Jamban.
+                </p>
+
+                <div class="social-links mt-3">
+                <a href="https://www.instagram.com/kknairjamban.2021/" target="blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://kukertaairjamban2021.medium.com/" target="blank" class="medium"><i class="bx bxl-medium"></i></a>
+                <a href="https://www.youtube.com/channel/UCrdXNa0K5RvWSlXwsN_2LPg" target="blank" class="youtube"><i class="bx bxl-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Profil</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="profil.html">Sejarah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="profil.html">Profil Kelurahan</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="profil.html">Data Personil</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Potensi</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="potensi.html">Potensi Wilayah</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="potensi.html">Potensi Wisata</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Statistik</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="statistik.html#penduduk">Penduduk</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="statistik.html#pekerjaan">Pekerjaan</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="statistik.html#pendidikan">Tingkat Pendidikan</a></li>
+            </ul>
+          </div>
+
+      <div class="container">
+        <div class="copyright">
+          &copy;2021 <strong><span>KUKERTA Air Jamban</span></strong
+          >. All Rights Reserved
+        </div>
+        <div class="credits"></div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+	<script src="-assets/js/chart-gender.js"></script>
+	
+  </body>
+</html>
